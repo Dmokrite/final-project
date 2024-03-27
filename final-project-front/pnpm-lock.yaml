@@ -47,6 +47,9 @@ dependencies:
   ngx-toastr:
     specifier: ^18.0.0
     version: 18.0.0(@angular/common@17.3.0)(@angular/core@17.3.0)(@angular/platform-browser@17.3.0)
+  ngx-uploader:
+    specifier: ^17.0.1
+    version: 17.0.1(@angular/common@17.3.0)(@angular/core@17.3.0)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
@@ -6054,6 +6057,17 @@ packages:
       '@angular/common': 17.3.0(@angular/core@17.3.0)(rxjs@7.8.1)
       '@angular/core': 17.3.0(rxjs@7.8.1)(zone.js@0.14.4)
       '@angular/platform-browser': 17.3.0(@angular/animations@17.3.0)(@angular/common@17.3.0)(@angular/core@17.3.0)
+      tslib: 2.6.2
+    dev: false
+
+  /ngx-uploader@17.0.1(@angular/common@17.3.0)(@angular/core@17.3.0):
+    resolution: {integrity: sha512-UqU84487gKvkLa30TzYJET+EWp7kww7YLLcJjc36kEw5N85Zic+WItLAzWodLrHu15XdOgDCpWrDVP/BEAlVkQ==}
+    peerDependencies:
+      '@angular/common': '>= 16.0.0'
+      '@angular/core': '>= 16.0.0'
+    dependencies:
+      '@angular/common': 17.3.0(@angular/core@17.3.0)(rxjs@7.8.1)
+      '@angular/core': 17.3.0(rxjs@7.8.1)(zone.js@0.14.4)
       tslib: 2.6.2
     dev: false
 
