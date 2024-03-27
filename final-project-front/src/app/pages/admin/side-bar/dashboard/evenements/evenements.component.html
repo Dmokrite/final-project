@@ -1,0 +1,150 @@
+<div class="content">
+  <section id="main" class="content-body">
+    <table class="table datagrid">
+      <thead>
+        <tr>
+          <th class="sorted integer">
+            ID <i class="fa fa-fw fa-arrow-down"></i>
+          </th>
+          <th class="string">Titre <i class="fa fa-fw fa-sort"></i></th>
+          <th class="virtual text">
+            <span>Emplacements</span>
+          </th>
+          <th class="toggle">
+            La notice peut être rejeté <i class="fa fa-fw fa-sort"></i>
+          </th>
+          <th class="toggle">Actif <i class="fa fa-fw fa-sort"></i></th>
+          <th>
+            <!-- <span class="sr-only">Actions</span> -->
+            <span class="string">Actions</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-id="2">
+          <td class="sorted integer">2</td>
+          <td class="string">
+            <span title="Floattz’t">Floattz’t</span>
+          </td>
+          <td class="text">Notice slider</td>
+          <td class="toggle">
+            <div class="checkbox-switch" data-propertyname="dismissed">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+            </div>
+          </td>
+          <td class="toggle">
+            <div class="checkbox-switch" data-propertyname="actif">
+              <label>
+                <input type="checkbox" checked="" />
+                <span></span>
+              </label>
+            </div>
+          </td>
+          <td class="actions">
+            <a class="btn btn-primary action-edit" title=""
+              ><i class="fa fa-fw fa-edit"></i
+            ></a>
+            <a class="btn btn-danger action-delete" title=""
+              ><i class="fa fa-fw fa-trash"></i
+            ></a>
+          </td>
+        </tr>
+        <tr data-id="1">
+          <td class="sorted integer">1</td>
+          <td class="string">
+            <span title="Créer banniere">Créer banniere</span>
+          </td>
+          <td class="text">Notice slider</td>
+          <td class="toggle">
+            <div class="checkbox-switch" data-propertyname="dismissed">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+            </div>
+          </td>
+          <td class="toggle">
+            <div class="checkbox-switch" data-propertyname="actif">
+              <label>
+                <input type="checkbox" checked="" />
+                <span></span>
+              </label>
+            </div>
+          </td>
+          <td class="actions">
+            <a class="btn btn-primary action-edit" title=""
+              ><i class="fa fa-fw fa-edit"></i
+            ></a>
+            <a class="btn btn-danger action-delete" title=""
+              ><i class="fa fa-fw fa-trash"></i
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <form
+      name="delete_form"
+      method="post"
+      action="/admin/?action=delete&amp;entity=Notice&amp;id=__id__&amp;referer=%2Fadmin%2F%3Fentity%3DNotice%26action%3Dlist%26menuIndex%3D0%26submenuIndex%3D3"
+      id="delete-form"
+      style="display: none"
+    >
+      <input type="hidden" name="_method" value="DELETE" />
+      <div id="delete_form" style="display: none">
+        <div class="form-group">
+          <button
+            type="submit"
+            id="delete_form_submit"
+            name="delete_form[submit]"
+            class="btn-primary btn"
+          >
+            Supprimer
+          </button>
+        </div>
+        <input
+          type="hidden"
+          id="delete_form__easyadmin_delete_flag"
+          name="delete_form[_easyadmin_delete_flag]"
+          value="1"
+        /><input
+          type="hidden"
+          id="delete_form__token"
+          name="delete_form[_token]"
+          value="B-Yf_X7y9Gupl_68aBKcs3bX5jadwSwYuclwOepSrwA"
+        />
+      </div>
+    </form>
+    <div id="modal-delete" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>Voulez-vous supprimer cet élément ?</h4>
+            <p>Cette action est irréversible.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              data-dismiss="modal"
+              class="btn btn-secondary"
+            >
+              <span class="btn-label">Annuler</span>
+            </button>
+            <button
+              type="button"
+              data-dismiss="modal"
+              class="btn btn-danger"
+              id="modal-delete-button"
+              formtarget="_self"
+            >
+              <i class="fa fa-fw fa-trash"></i>
+              <span class="btn-label">Supprimer</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

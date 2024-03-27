@@ -1,0 +1,95 @@
+<app-header></app-header>
+
+
+
+    <div class="quick-search">
+  <input type="text" [(ngModel)]="searchCity" (ngModelChange)="onSearchChange()" placeholder="Rechercher par ville">
+
+  <select [(ngModel)]="selectedGender" (ngModelChange)="onGenderChange()">
+    <option value="">Je cherche</option>
+    @for(gender of genders; track gender){
+    <option [value]="gender">{{ gender }}</option>
+    }
+  </select>
+
+  
+
+<select [(ngModel)]="availabilityFilterValue">
+    <option [ngValue]="defaultAvailabilityFilterValue">-- Je me déplace ou je reçois? --</option>
+  <option value="Les deux">Peu importe</option>
+  <option value="private">Je préfère me déplacer</option>
+  <option value="escort">Je préfère recevoir chez moi</option>
+</select>
+  <button type="button" (click)="onSearchChange()">Rechercher</button>
+  <button type="button" (click)="togglePracticesFilter()">{{ isPracticesFilterVisible ? '- de filtres' : '+ de filtres' }}</button>
+  <button type="button" (click)="resetFilters()">Réinitialiser les filtres</button>
+</div>
+
+@if(isPracticesFilterVisible){
+ <div class="checkboxes-filters">
+    @for(practice of practices; track practice.id){
+        <div>
+    <input type="checkbox">
+    <label>{{ practice.name }}</label>
+    </div>
+    }
+</div> 
+}
+
+<div class="banner">
+    <div class="absolute-title">
+        <h1>Les annonces</h1>
+    <p>Retrouvez ici toutes les annonces de nos membres</p>
+    </div>
+     
+    <div class="banner-inside">
+       
+    </div>
+</div>
+
+
+<div class="content">  
+@for (annonce of filteredUsers; track annonce.id) {
+  
+  <div (click)="onAnnouncementClick(annonce)" class="block-announce" [style.backgroundImage]="'url(' + getCoverImageUrl(annonce) + ')'">
+    
+   
+    <div class="announce-infos">
+    <h1>{{ annonce.nickname }}</h1>
+    <h2>{{ annonce.announce.title }}</h2>
+    <p class="city"><i class="fa-solid fa-location-dot"></i> {{ annonce.address.city }}</p>
+    </div>
+  </div>
+
+  }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="content">
+@if(users.length > 0){ 
+    
+    @for(user of users; track user.id){ 
+        @if(user.announce){
+ <div class="block-announce">
+    {{ user.nickname}}     
+    {{ user.announce.title}} 
+    {{ user.address.city}}
+  </div>
+  }       
+    }
+}
+</div>
+-->

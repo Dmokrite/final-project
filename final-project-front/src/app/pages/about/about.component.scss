@@ -1,0 +1,29 @@
+.projet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../../../assets/images/contact/Aldi-Champagne-Bar.jpg);
+    background-size: cover;
+}
+
+h2 {
+    color: white;
+    margin-top: 25px;
+}
+
+h4 {
+    background-color: rgb(235, 16, 16);
+    border-radius: 4px;
+    padding: 2px;
+    color: white;
+}
+
+a {
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.pushBottom {
+    margin-bottom: 350px;
+}

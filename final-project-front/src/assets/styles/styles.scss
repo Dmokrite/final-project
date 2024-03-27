@@ -1,0 +1,212 @@
+.main-sidebar {
+  padding: 1px;
+  background: #131313;
+  width: 300px;
+  height: 100%;
+  min-height: 920px;
+  margin-right: 25px;
+  margin-left: -40px;
+}
+.sidebar-menu a {
+  color: white;
+}
+.sidebar-menu ul {
+  background-color: #131313;
+}
+.sidebar-menu ul li {
+  border-top: 1px solid #37414b;
+  border-bottom: 1px solid #1f262d;
+  padding: 6px 0px;
+}
+ul.sidebar-menu {
+  //border-bottom: 1px solid #37414b;
+  list-style-type:none
+}
+.sidebar-menu > li > a {
+margin-left: 24px;
+}
+.info-box {
+  display: block;
+  min-height: 90px;
+  width: 100%;
+  box-shadow: inset 0px 0px 0px 1px black, 0px 5px 10px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  margin-bottom: 15px;
+  background-image: url(../images/admin/decoadmin.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.info-box-general {
+  background-color: #e74c3c;
+}
+.info-box-icon-general {
+  background: #c0392b;
+}
+.info-box-user {
+  background-color: rgb(50, 108, 149);
+}
+.info-box-icon-user {
+  background: rgb(34, 49, 63);
+}
+.info-box-forum {
+  background-color: #9b59b6;
+}
+.info-box-icon-forum {
+  background: #8e44ad;
+}
+.info-box-icon {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 2px;
+  display: block;
+  float: left;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  font-size: 45px !important;
+  line-height: 90px;
+}
+.info-box-content {
+  padding: 5px 10px;
+  margin-left: 90px;
+  color: #c8c8c8;
+}
+.info-box-number {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.info-box-icon i {
+  line-height: 90px;
+  color: #c8c8c8;
+}
+.serverTitle {
+background-color: #ff004c;
+color: white;
+text-shadow: 1px 1px 0px black;
+padding: 6px 15px;
+border-bottom: 2px solid #131313;
+box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+}
+.server-title, .server-title i {
+font-size: 13pt;
+font-weight: bold;
+}
+.sidebar-content {
+background-color: rgb(245,245,245);
+box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+border-top: solid #131313;
+}
+.staffRole {
+  font-size: 13px;
+}
+.sidebar-body-staf {
+  padding-right: 9px;
+  padding-left: 9px;
+}
+.sidebar-content-staf {
+padding-top: 9px;
+padding-bottom: 9px;
+border-bottom: 1px solid rgb(47, 120, 160);
+}
+.sidebar-content-staf:last-child {
+border: none;
+}
+.visitor-avatar {
+  margin-right: 5px;
+  float: left;
+  width: auto;
+  height: auto;
+}
+.visitor-avatar img {
+border: 1px solid #2f78a0;
+box-shadow: 0px 1px 0px rgba(255,255,255,0.25), inset 0px 1px 5px black;
+}
+.CodeMirror-sizer {
+  min-width: 100%!important;
+}
+.CodeMirror {
+  width: 100%;
+  display: inline-grid;
+}
+.table-responsive {
+display: inline-table;
+}
+#navigation-toggler {
+color: white;
+}
+.page-content-with-padding .content-body {
+padding: 0px;
+}
+.dataList-hint {
+color: #8c8c8c;
+font-size: 12px;
+font-weight: 400;
+}
+.page-inner{
+  width: 100%;
+  margin: 10px 20px 10px 0px;
+  background-color: rgb(245, 245, 245);
+  padding: 10px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+  border-top: 2px solid #ff004c;
+}
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--border-radius);
+  transition: all .08s ease-in
+}
+.badge-secondary {
+    color: #212529;
+    background-color: #ff004c
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+  
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  #window {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ff004c;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-body, .mat-body-2, .mat-typography .mat-body, .mat-typography .mat-body-2, .mat-typography {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.009375em;
+  background-color: #ff004c;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

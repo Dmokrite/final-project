@@ -1,0 +1,30 @@
+<app-header>
+  
+</app-header>
+
+<form class="formContact">
+    <div class="form-group">
+        <label for="name" class="first"><div class="label-content">Nom :</div></label>
+        <input type="text" id="name" formControlName="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="name"><div class="label-content">Prénom :</div></label>
+        <input type="text" id="name" formControlName="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="email"><div class="label-content">Email :</div></label>
+        <input type="email" id="email" formControlName="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="message"><div class="label-content">Message :</div></label>
+        <textarea id="message" formControlName="message" class="form-text-area"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+
+    <br class="pushBottom">
+</form>
+
+
+
+  
+<router-outlet></router-outlet>

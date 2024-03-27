@@ -1,0 +1,51 @@
+.bg {
+    background-image: url(../../../assets/images/contact/2743894-le-developpeur-web-est-un-professionnel-de-l-informatique-specialise-dans-le-code-original.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 320px;
+    margin-right: 320px;
+    padding: 20px;
+    background-color: rgb(237, 102, 102, 0.7);
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    text-decoration: underline;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.pushBottom {
+    color: white;
+}

@@ -1,0 +1,53 @@
+<h1>Mes données personnelles</h1>
+
+<p>Genre : {{ advertiserProfile?.genre }}</p>
+<p>Orientation : {{ advertiserProfile?.orientation }}</p>
+<p>Taille : {{ advertiserProfile?.size }}</p>
+<p>Poids : {{ advertiserProfile?.weight }}</p>
+@if(advertiserProfile?.penisSize){<p>Taille de la fusée : {{ advertiserProfile?.penisSize }}</p>}
+@if(advertiserProfile?.braCup){<p>Taille des airbags : {{ advertiserProfile?.braCup }}</p>}
+<p>Couleur des cheveux : {{ advertiserProfile?.hairColor }}</p>
+<p>Couleur des yeux : {{ advertiserProfile?.eyeColor }}</p>
+
+<button (click)="toggleEdit()">Modifier</button>
+@if(isEditing){
+<div id="edit-form">
+  <h2>Modifier mes données</h2>
+  <form>
+    <label for="genre">Genre :</label>
+    <select type="text" name="genre" id="genre" [(ngModel)]="formData.genre" required>
+        <option value="homme" [defaultSelected]>Homme</option>
+        <option value="homme" [defaultSelected]>Femme</option>
+        <option value="homme" [defaultSelected]>Robot</option>
+        <option value="homme" [defaultSelected]>Transgenre</option>
+        <option value="homme" [defaultSelected]>Transexuel</option>
+        <option value="homme" [defaultSelected]>Transformers</option>
+    </select>
+    
+    <br>
+    <label for="orientation">Orientation :</label> <input type="text" name="orientation" id="orientation">
+    <br>
+    <label for="size">Taille (en cm) :</label>  
+    <input type="text" name="size" id="size">
+    <br>
+    <label for="weight">Poids :</label>
+    <input type="text" name="weight" id="weight">
+    <br>
+    @if(advertiserProfile?.penisSize){
+    <label for="penisSize">Taille de la fusée :</label>
+    <input type="number" name="penisSize" id="penisSize">
+    <br>
+    }
+    <label for="braCup">Taille des airbags :</label>
+    <input type="text" name="braCup" id="braCup">
+    <br>
+    <label for="eyeColor">Couleur des yeux :</label>
+    <input type="text" name="eyeColor" id="eyeColor">
+    <br>
+    <label for="hairColor">Couleur des cheveux :</label>
+    <input type="weight" name="hairColor" id="hairColor">
+    <br>
+    <button type="submit">Valider</button>
+  </form>
+</div>
+}

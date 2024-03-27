@@ -1,0 +1,48 @@
+<app-header>
+  
+</app-header>
+test
+
+{{ annonce?.firstname }}
+@if (annonce){
+  <h2>Annonce de {{ annonce.firstname }} {{ annonce.lastname }}</h2>
+
+  <ul>
+    <li>Prénom et Nom: {{ annonce.firstname }} {{ annonce.lastname }}</li>
+    <li>Pseudo: {{ annonce.nickname }}</li>
+    <li>Email: {{ annonce.email }}</li>
+    <li>Adresse: {{ annonce.address.street }} {{ annonce.address.number }}, {{ annonce.address.city }} {{ annonce.address.zip_code }}</li>
+    
+    <li>Compte créé le : {{ annonce.createdAt }}</li>
+    <li>Compte mis à jour le : {{ annonce.updatedAt }}</li>
+    
+    <li>Orientation : {{ annonce.address.number }}</li>
+
+    <li>Titre de l'annonce : {{ annonce.announce.title }}</li>
+    <li>Description de l'annonce: {{ annonce.announce.description }}</li>
+    <li>Carte d'infidélité ? : {{ annonce.announce.infidelityCard }}</li>
+    <li>Reçoit en privé ? : {{ annonce.announce.private }}</li>
+    <li>Se déplace ? : {{ annonce.announce.escort }}</li>
+    @for(practice of annonce.announce.practices; track practice){
+    <li>Pratique : {{ practice }}</li>
+    }
+    @if(annonce.announce.pricing['15min'] != null && annonce.announce.pricing['15min']>0) {
+    <li>Prix 15min : {{ annonce.announce.pricing['15min'] }}</li>
+    }
+    @if(annonce.announce.pricing['30min'] != null && annonce.announce.pricing['30min']>0) {
+    <li>Prix 30min : {{ annonce.announce.pricing['30min'] }}</li>
+    }
+    @if(annonce.announce.pricing['45min'] != null && annonce.announce.pricing['45min']>0) {
+    <li>Prix 45min : {{ annonce.announce.pricing['45min'] }}</li>
+    }
+    @if(annonce.announce.pricing['60min'] != null && annonce.announce.pricing['60min']>0) {
+    <li>Prix 1h : {{ annonce.announce.pricing['60min'] }}</li>
+    }
+    
+    </ul>
+    <button (click)="goBack()">Retour</button>
+}
+@else if (!annonce){  <p>Chargement des informations de l'utilisateur ...</p>}
+
+
+

@@ -1,0 +1,28 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.block-announce {
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 450px;
+    height: 300px;
+    background-color: rgb(237, 102, 102, 0.8);
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}

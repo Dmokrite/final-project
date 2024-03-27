@@ -1,0 +1,145 @@
+{
+  "users": [
+    {
+      "id": "4a44",
+      "nickname": "bibi",
+      "email": "xtralys@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "03f5",
+      "nickname": "fezfze",
+      "email": "test@ds",
+      "password": "1234"
+    },
+    {
+      "id": "b7e4",
+      "nickname": "steve",
+      "email": "xtralys@gmail.com",
+      "password": "test"
+    },
+    {
+      "id": "ae85",
+      "nickname": "steve",
+      "email": "xtralys@gmail.com",
+      "password": "test"
+    },
+    {
+      "id": "9975",
+      "nickname": "steve",
+      "email": "xtralys@gmail.com",
+      "password": "test"
+    },
+    {
+      "id": "ba84",
+      "nickname": "jytjyt",
+      "email": "donkeyhtv@gmail.com",
+      "password": "1111"
+    },
+    {
+      "id": "4e74",
+      "nickname": "jytjyt",
+      "email": "donkeyhtv@gmail.com",
+      "password": "1111"
+    },
+    {
+      "id": "7f1e",
+      "nickname": "cds",
+      "email": "donkeyhtv@gmail.com",
+      "password": "ccc"
+    },
+    {
+      "id": "a811",
+      "nickname": "dscs",
+      "email": "donkeyhtv@gmail.com",
+      "password": "ddd"
+    },
+    {
+      "id": "725a",
+      "nickname": "xxzqx",
+      "email": "zeze@hh",
+      "password": "hhh"
+    },
+    {
+      "id": "3924",
+      "nickname": "xxzqx",
+      "email": "zeze@hh",
+      "password": "hhh"
+    },
+    {
+      "id": "e02b",
+      "nickname": "ds",
+      "email": "aa@aa",
+      "password": "aa"
+    },
+    {
+      "id": "cdda",
+      "nickname": "zz",
+      "email": "zz@zz",
+      "password": "zz"
+    },
+    {
+      "id": "c153",
+      "nickname": "tyj",
+      "email": "jytjty@de",
+      "password": "eee"
+    },
+    {
+      "nickname": "sz",
+      "email": "aa@aa",
+      "password": "aa",
+      "id": "OMkVDwh"
+    },
+    {
+      "nickname": "dede",
+      "email": "dededede@gmail",
+      "password": "dede",
+      "id": "GgSEMoo"
+    },
+    {
+      "nickname": "dddd",
+      "email": "donkeyhtv@gmail.com",
+      "password": "dddddddd",
+      "id": "-x7XIco"
+    },
+    {
+      "firstname": "Steve",
+      "lastname": "Amissi",
+      "nickname": "dede",
+      "email": "donkeyhtv@gmail.com",
+      "password": "gggggggg",
+      "address": {
+        "street": "rue de l'athénée"
+      },
+      "id": "GxBJJ_u"
+    },
+    {
+      "firstname": "Steve",
+      "lastname": "Amissi",
+      "nickname": "fezf",
+      "email": "donkeyhtv@gmail.com",
+      "password": "aaaaaaaa",
+      "address": {
+        "street": "Steve Amissi",
+        "number": 45,
+        "city": "Tournai",
+        "zip_code": "7530"
+      },
+      "id": "Z9Nt4T2"
+    },
+    {
+      "firstname": "Steve",
+      "lastname": "Amissi",
+      "nickname": "dddd",
+      "email": "donkeyhtv@gmail.com",
+      "password": "gggggggg",
+      "address": {
+        "street": "grezge",
+        "number": "4",
+        "city": "Tournai",
+        "zip_code": 7530
+      },
+      "id": "XHYk5VM"
+    }
+  ]
+}

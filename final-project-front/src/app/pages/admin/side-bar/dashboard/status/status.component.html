@@ -1,0 +1,187 @@
+<mat-card *ngFor="let prop of ['userCount', 'adminCount', 'manCount', 'womenCount', 'transgenreCount', 'transformersCount', 'robotCount','announceCount','announceDayCount']"> 
+</mat-card>
+<div class="content">
+  <section id="main" class="content-body">
+    <div class="padding-admin">
+      <div class="row tile_count">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-general">
+            <span class="info-box-icon info-box-icon-general">
+              <i class="fa fa-users"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des membres</span>
+              <div class="info-box-number">{{ getCount('userCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-general">
+            <span class="info-box-icon info-box-icon-general">
+              <i class="fa fa-street-view"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des personnes en ligne</span>
+              <div class="info-box-number">{{ getCount('adminCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-general">
+            <span class="info-box-icon info-box-icon-general">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des messages</span>
+              <div class="info-box-number">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <h2>Statistiques des utilisateurs</h2>
+      <hr/>
+      <div class="row tile_count">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-user">
+            <span class="info-box-icon info-box-icon-user">
+              <i class="fa fa-venus"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des membres feminin</span>
+              <div class="info-box-number">{{ getCount('womenCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-user">
+            <span class="info-box-icon info-box-icon-user">
+              <i class="fa fa-mars"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des membres masculin</span>
+              <div class="info-box-number">{{ getCount('manCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-user">
+            <span class="info-box-icon info-box-icon-user"> 
+              <i class="fa fa-transgender"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des membres transexuelle</span>
+              <div class="info-box-number">{{ getCount('adminCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-user">
+            <span class="info-box-icon info-box-icon-user">
+              <i class="fa fa-robot"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des membres robot</span>
+              <div class="info-box-number">{{ getCount('robotCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-user">
+            <span class="info-box-icon info-box-icon-user">
+              <img class="iconSpecial" src="../../../../../../assets/images/admin/transfor.svg">
+            </span>
+            <div class="info-box-content">
+              <span>Total des membres transformers</span>
+              <div class="info-box-number">{{ getCount('transformersCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-user">
+            <span class="info-box-icon info-box-icon-user">
+              <i class="fa-solid fa-transgender"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des memnbres transgenres</span>
+              <div class="info-box-number">{{ getCount('transgenreCount') }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <h2>Statistiques des annonces</h2>
+      <hr/>
+      <div class="row tile_count">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-forum">
+            <span class="info-box-icon info-box-icon-forum">
+              <i class="fa fa-comments"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des annonces</span>
+              <div class="info-box-number">{{ getCount('announceCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-forum">
+            <span class="info-box-icon info-box-icon-forum">
+              <i class="fa fa-comment"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des commentaires</span>
+              <div class="info-box-number">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-forum">
+            <span class="info-box-icon info-box-icon-forum">
+              <i class="fa fa-cog"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Nombres de catégories</span>
+              <div class="info-box-number">4</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-forum">
+            <span class="info-box-icon info-box-icon-forum"
+              ><i class="fa fa-comments-o"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des annonces aujourd'hui</span>
+              <div class="info-box-number">{{ getCount('announceDayCount') }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-forum">
+            <span class="info-box-icon info-box-icon-forum"
+              ><i class="fa fa-comment-o"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Total des commentaires aujourd'hui</span>
+              <div class="info-box-number">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box info-box-forum">
+            <span class="info-box-icon info-box-icon-forum"
+              ><i class="fa fa-cogs"></i>
+            </span>
+            <div class="info-box-content">
+              <span>Nombres de pratiques</span>
+              <div class="info-box-number">23</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-footer"></section>
+</div>

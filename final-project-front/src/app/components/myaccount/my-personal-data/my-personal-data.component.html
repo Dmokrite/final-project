@@ -1,0 +1,40 @@
+<h1>Mes données personnelles</h1>
+
+<p>Email : {{ personalData?.user?.email }}</p>
+<p>N° de sécurité sociale : {{ personalData?.user?.niss }}</p>
+<p>Pseudo : {{ personalData?.user?.nickname }}</p>
+
+<p>Adresse : </p>
+<ul>
+  <li>{{ personalData?.user?.address?.street }}</li>
+  <li>{{ personalData?.user?.address?.number }}</li>
+  <li>{{ personalData?.user?.address?.city }}</li>
+  <li>{{ personalData?.user?.address?.zip_code }}</li>
+</ul>
+
+<button (click)="toggleEdit()">Modifier</button>
+@if(isEditing){
+<div id="edit-form">
+  <h2>Modifier mes données</h2>
+  <form (ngSubmit)="onSubmit(formData)" #f="ngForm">
+    <label for="email">Email :</label>
+    <input type="email" name="email" id="email" [(ngModel)]="formData.email" required>
+    <br>
+    <label for="nickname">Pseudo :</label> <input type="text" name="nickname" id="nickname" [(ngModel)]="formData.nickname" required>
+    <br>
+    <label for="street">Rue :</label>  
+    <input type="text" name="street" id="street" [(ngModel)]="formData.address.street" required>
+    <br>
+    <label for="number">Numéro :</label>
+    <input type="text" name="number" id="number" [(ngModel)]="formData.address.number" required>
+    <br>
+    <label for="city">Ville :</label>
+    <input type="text" name="city" id="city" [(ngModel)]="formData.address.city" required>
+    <br>
+    <label for="zip_code">Code postal :</label>
+    <input type="number" name="zip_code" id="zip_code" [(ngModel)]="formData.address.zip_code" required>
+    <br>
+    <button type="submit" (click)="onSubmit(formData)">Valider</button>
+  </form>
+</div>
+}

@@ -1,0 +1,48 @@
+<h1>Gérer mon annonce</h1>
+
+<p>Titre : {{ personalData?.announce?.title }}</p>
+<p>Description : {{ personalData?.announce?.description }}</p>
+<p>Privé : {{ personalData?.announce?.private }}</p>
+<p>Escorte : {{ personalData?.announce?.escort }}</p>
+
+<p>Pratiques : </p>
+
+<ul>
+@for(practice of personalData?.announce?.practices; track practice){
+<li class="practice-name">
+  @for(i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]; track i){
+    {{ practice === i ? obj[i] : ""}}
+  }
+</li>
+}
+
+
+</ul>
+
+<button (click)="toggleEdit()">Modifier</button>
+@if(isEditing){
+<div id="edit-form">
+  <h2>Modifier mes données</h2>
+  <form (ngSubmit)="onSubmit(formData)" #f="ngForm">
+    <label for="title">Titre :</label>
+    <input type="text" name="title" id="title" [(ngModel)]="formData.title" required>
+    <br>
+    <label for="description">Description :</label>
+    <textarea type="text" name="description" id="description" [(ngModel)]="formData.description" required></textarea>
+    <br>
+    
+
+    
+
+    
+    <button type="submit" (click)="onSubmit(formData)">Valider</button>
+    
+  </form>
+
+  
+
+</div>
+}
+
+
+<app-upload-files></app-upload-files>

@@ -1,0 +1,150 @@
+<nav [class.scrolled]="isScrolled">
+  <div class="nav-link">
+    <a routerLink="/home" routerLinkActive="active">
+      <i class="fa-solid fa-house"></i> Accueil
+    </a>
+  </div>
+  @if(isLoggedIn()){
+  <div class="nav-link">
+    <a routerLink="/allannounces"
+      ><i class="fa-solid fa-id-badge"></i> Annonces</a
+    >
+  </div>
+  } @else {
+  <div class="nav-link">
+    <a routerLink (click)="openModal(haveToConnectModal)"
+      ><i class="fa-solid fa-id-badge"></i> Annonces</a
+    >
+  </div>
+  }
+
+  <div class="nav-link">
+    <a routerLink="/all-announces" routerLinkActive="active">
+      <i class="fa-solid fa-hands-clapping"></i> Annoncestest
+    </a>
+  </div>
+
+  <div class="nav-link">
+    <a routerLink="/contact" routerLinkActive="active">
+      <i class="fa-solid fa-envelope"></i> Contact
+    </a>
+  </div>
+
+  <div class="nav-link">
+    <a routerLink="/about" routerLinkActive="active">
+      <i class="fa-solid fa-code"></i> About
+    </a>
+  </div>
+
+  <div class="nav-link">
+    <a routerLink="/thank" routerLinkActive="active">
+      <i class="fa-solid fa-hands-clapping"></i> Remerciement
+    </a>
+  </div>
+
+  <div></div>
+
+  @if(!isLoggedIn()){
+  <div class="nav-link">
+    <a routerLink="/login" routerLinkActive="active"
+      ><i class="fa-solid fa-user"></i>
+
+      <span> Se connecter</span>
+    </a>
+  </div>
+  } @if(isLoggedIn()){
+  <div class="nav-link">
+    <a routerLink="/myaccount" routerLinkActive="active"
+      ><i class="fa-solid fa-user"></i>
+      @if(nickname){
+      <span> Bonjour {{ nickname }}</span>
+      } @else { Bienvenue }</a
+    >
+  </div>
+  } @if(isLoggedIn() && isAdmin() === 'true'){
+
+  <div class="nav-link">
+    <a routerLink="/admin/dashboard" routerLinkActive="active"
+      ><i class="fa-solid fa-gear"></i
+    ></a>
+  </div>
+  }
+  <div class="nav-link">
+    <a routerLink="/admin/dashboard" routerLinkActive="active"
+      ><i class="fa-solid fa-bell"></i
+    ></a>
+  </div>
+  @if(isLoggedIn()){
+  <div class="nav-link">
+    <a (click)="openModal(logoutModal)"
+      ><i class="fa fa-power-off"></i>
+      Se déconnecter
+    </a>
+  </div>
+  }
+</nav>
+
+<ng-template #logoutModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Confirmation</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('cancel')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">Êtes-vous sûr de vouloir vous déconnecter ?</div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="modal.close('logout')"
+    >
+      Se déconnecter
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="modal.dismiss('cancel')"
+    >
+      Annuler
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #haveToConnectModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Accès interdit!</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('cancel')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Vous devez être connecté pour accéder aux annonces !
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-danger"
+      routerLink="/login"
+      (click)="modal.dismiss('close')"
+    >
+      Se connecter
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="modal.dismiss('cancel')"
+    >
+      Annuler
+    </button>
+  </div>
+</ng-template>

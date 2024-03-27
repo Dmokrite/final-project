@@ -1,0 +1,29 @@
+nav{
+  display:flex;
+  align-items: center;
+  height:100%;
+  .nav-link a{
+    color:#fff;
+    text-decoration: none;
+    padding:25px 10px;
+    &:hover{
+      border-bottom:3px solid white;
+      cursor:pointer;
+    }
+  }
+}
+
+nav.iscrolled{
+  display:flex;
+  align-items: center;
+  height:100%;
+  .nav-link a{
+    color:#333;
+    text-decoration: none;
+    padding:10px;
+    &:hover{
+      color: #ff004c;
+      cursor:pointer;
+    }
+  }
+}

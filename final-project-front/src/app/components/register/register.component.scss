@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  .register-component {
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px;
+    border: 1px solid #e0e0e0;
+    width: 800px;
+    label {
+      display: block;
+    }
+    input {
+      display: block;
+      width: 100%;
+    }
+    .error {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="container">
+  <form
+    class="login-component"
+    [formGroup]="loginForm"
+    (ngSubmit)="loginUser()"
+  >
+    <h2 class="header-form">Connexion</h2>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+        required
+        placeholder="Email"
+      />
+      @if(email.invalid && email.dirty || email.touched){
+      <small class="error">
+        @if(email.errors?.['required']){
+        <div>Email obligatoire</div>
+        } @if(email.errors?.['email']){
+        <div>Email invalide</div>
+        }
+      </small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="password">Mot de passe</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+        required
+        placeholder="Mot de passe"
+      />
+      @if(password.invalid && password.dirty || password.touched){
+      <small class="error">
+        @if(password.errors?.['required']){
+        <div>Mot de passe obligatoire</div>
+        }
+      </small>
+      }
+    </div>
+
+    <button [disabled]="loginForm.invalid">Connexion</button>
+    <div>
+      Pas encore membre? <a routerLink="/register">Viens prendre ton pied!</a>
+    </div>
+  </form>
+</div>

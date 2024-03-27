@@ -1,0 +1,63 @@
+<div class="styleModal">
+  <div class="styleTitle">
+    <h1>Profil Utilisateur</h1>
+  </div>
+  <legend>Compte</legend>
+  <div>
+    <p>Prénom : {{ formData.firstname }}</p>
+  </div>
+  <div>
+    <p>Nom : {{ formData.lastname }}</p>
+  </div>
+  <div>
+    <p>Pseudo : {{ formData.nickname }}</p>
+  </div>
+  <div>
+    <p>Email : {{ formData.email }}</p>
+  </div>
+  <div>
+    <p>NISS : {{ formData.niss }}</p>
+  </div>
+  <div>
+    <p>Inscription : {{ formData.createdAt }}</p>
+  </div>
+  <fieldset>
+    <legend>Adresse</legend>
+    <div>
+      <p>Rue : {{ formData.address.street }}</p>
+    </div>
+    <div>
+      <p>Numéro : {{ formData.address.number }}</p>
+    </div>
+    <div>
+      <p>Ville : {{ formData.address.city }}</p>
+    </div>
+    <div>
+      <p>Code postal : {{ formData.address.zip_code }}</p>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Detail</legend>
+    <div>
+      <p>Genre : {{ formData.userProfile.genre }}</p>
+    </div>
+    <div>
+      <p>Orientation : {{ formData.userProfile.orientation }}</p>
+    </div>
+    <div>
+      <p>Taille : {{ formData.userProfile.size }}</p>
+    </div>
+    <div>
+      <p>Poids : {{ formData.userProfile.weight }}</p>
+    </div>
+    <div>
+      <p>Taille du pénis : {{ formData.userProfile.penisSize }}</p>
+    </div>
+    <div>
+      <p>Couleur des cheveux : {{ formData.userProfile.hairColor }}</p>
+    </div>
+    <div>
+      <p>Couleur des yeux : {{ formData.userProfile.eyeColor }}</p>
+    </div>
+  </fieldset>
+</div>

@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="announces-container">
+
+    @for(user of filteredResults; track user){
+      <div class="announce-block" (click)="goToDetails(user.id)">
+        <img src="../../../assets/images/profile1/{{ user.id }}.png" alt="" class="profile-img" />
+        <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+        <div class="private-escort">
+          @if(user.announce && user.announce.private){
+          <span class="private" >Privé</span>
+          }
+          @if(user.announce && user.announce.escort){
+          <span class="escort" >Escorte</span>
+          }
+        </div>
+        <div class="locality">
+          <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+          {{ user.address?.city }}
+        </div>
+        <div class="announce-details">
+          <span class="announce-title">{{ user.announce?.title }}</span>
+          
+        </div>
+      </div>
+    }
+
+</div>

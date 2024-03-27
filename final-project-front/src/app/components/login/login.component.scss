@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+  .login-component {
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px;
+    border: 1px solid #e0e0e0;
+    width: 800px;
+    input {
+      width: 100%;
+      display: block;
+    }
+    .error {
+      color: red;
+    }
+  }
+}
