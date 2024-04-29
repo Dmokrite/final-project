@@ -4,7 +4,7 @@
 
 `npm i`
 
-## Intaller la DB et la lancer :
+## Installer la DB et la lancer :
 
 `docker compose up -d`
 
@@ -13,7 +13,7 @@
 Renommez le fichier .env.example en .env et complétez :
 ```
 DB_PASSWORD=postmdp
-DB_DATABASE=comixdb
+DB_DATABASE=sexagogo
 ```
 
 ## Lancer le serveur en mode dev :
